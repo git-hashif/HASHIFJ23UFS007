@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="impotance of HTML 5" />
+    <meta name="author" content="Hashif Kaderi" />
+    <meta name="Content-Type"content="text/html">
+    <link rel="stylesheet" href="index.css" />
+    <!-- <meta http-equiv="refresh"content="5"> -->
+    <title>HTML5</title>
+  </head>
+  <body>
+    <hitstudent><center>Importance of HTML 5</center></hitstudent>
+    <section>
+      <h1>HTML Geolocation</h1>
+      <p>
+        This API is used to find out the location of a user. Considering that
+        this can compromise privacy, the specific location will only be
+        available if the user approves it. The geolocation is useful, as it
+        provides handy information regarding a specific location, or practical
+        route information. Many applications today are geolocation based.
+      </p>
+      <h3 style="color: blue;">Test the location</h3>
+      <button onclick="getLocation()">Click for Geolocation</button>
+      <p id="demo"></p>
+    </section>
+    <section>
+      <h1 >HTML Drag and Drop</h1>
+      <p>
+        This API enables you to “catch” an element and drag it to a different
+        location. HTML Drag and Drop makes it possible for applications to drag
+        items and drop them in different browsers. Unlike earlier versions of
+        HTML, in HTML5 any element is draggable!
+      </p>
+
+      <em style="color: blue;">Drag the HaarisInfoTech image into the rectangle:</em>
+
+      <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <br />
+      <img
+        id="drag1"
+        src="img/images.png"
+        draggable="true"
+        ondragstart="drag(event)"
+        width="336"
+        height="69"
+        style="object-fit: cover"
+      />
+    </section>
+    <section>
+      <h1>HTML Local Storage</h1>
+      Thanks to local storage, applications can store large amounts of data
+      locally within the user’s browser. This mechanism is similar to session
+      cookies, but is more secure and has less impact on website performance.
+      Additionally, data in Local Storage has no expiration time and persists
+      even after the browser is closed, unlike individual browsing sessions.
+    </section>
+    <section>
+      <h1>Other Major Features of <em>HTML 5</em></h1>
+      <ul>
+        <li>
+          It has introduced new multimedia features which supports both audio
+          and video controls by using &lt;audio &gt; and &lt;video&gt; tags.
+        </li>
+        <li>Uses SQL database to store data offline.</li>
+        <li>
+          Allows drawing various shapes like triangle, rectangle, circle, etc.
+        </li>
+        <li>Capable of handling incorrect syntax</li>
+        <li>
+          There are new graphics elements including vector graphics and tags.
+        </li>
+        <li>
+          Enrich semantic content by including &lt;header&gt; &lt;footer&gt;,
+          &lt;article&gt;, &lt;section&gt; and &lt;figure&gt; are added.
+        </li>
+      </ul>
+    </section>
+    <section> <article>
+      <h1>Newly added HTML Tags</h1>
+      <ul>
+        <li><b>&lt;article&gt;</b>: The &lt;article&gt; tag is used to represent an
+            article. More specifically, the content within the &lt;article&gt; tag
+            is independent from the other content of the site (even though it can
+            be related).
+          </li>
+          <li><b>&lt;aside&gt;</b>: The &lt;aside&gt; tag is used to describe the main
+            object of the web page in a shorter way like a highlighter. It
+            basically identifies the content that is related to the primary
+            content of the web page but does not constitute the main intent of the
+            primary page. The &lt;aside&gt; tag contains mainly author
+            information, links, related content and so on.
+          </li>
+          <li><b>&lt;figcaption&gt;</b>: The &lt;figcaption&gt; tag in HTML is used to set
+            a caption to the figure element in a document.
+          </li>
+          <li><b>&lt;figure&gt;</b>: The &lt;figure&gt; tag in HTML is used to add
+            self-contained content like illustrations, diagrams, photos or codes
+            listing in a document. It is related to main flow, but it can be used
+            in any position of a document and the figure goes with the flow of the
+            document and if it is removed it should not affect the flow of the
+            document.
+          </li>
+          <li><b>&lt;header&gt;</b>: It contains the section heading as well as other
+            content, such as a navigation links, table of contents, etc.
+          </li>
+          <li><b>&lt;footer&gt;</b>: The &lt;footer&gt; tag in HTML is used to define a
+            footer of HTML document. This section contains the footer information
+            (author information, copyright information, carriers etc.). The footer
+            tag is used within body tag. The &lt;footer&gt; tag is new in the HTML
+            5. The footer elements require a start tag as well as an end tag.
+          </li>
+          <li><b>&lt;main&gt;</b>: Delineates the main content of the body of a document or
+            web app.
+          </li>
+          <li><b>&lt;mark&gt;</b>: The &lt;mark&gt; tag in HTML is used to define the
+            marked text. It is used to highlight the part of the text in the
+            paragraph.
+          </li>
+          <li><b>&lt;nav&gt;</b>: The &lt;nav&gt; tag is used to declaring the navigational
+            section in HTML documents. Websites typically have sections dedicated
+            to navigational links, which enables user to navigate the site. These
+            links can be placed inside a nav tag.
+          </li>
+          <li><b>&lt;section&gt;</b>: It demarcates a thematic grouping of content.</li>
+          <li><b>&lt;details&gt;</b>: The &lt;details&gt; tag is used for the
+            content/information which is initially hidden but could be displayed
+            if the user wishes to see it. This tag is used to create interactive
+            widget which user can open or close it. The content of details tag is
+            visible when open the set attributes.
+          </li>
+          <li><b>&lt;summary&gt;</b>: The &lt;summary&gt; tag in HTML is used to define a
+            summary for the &lt;details&gt; element. The &lt;summary&gt; element
+            is used along with the &lt;details&gt; element and provides a summary
+            visible to the user. When the summary is clicked by the user, the
+            content placed inside the &lt;details&gt; element becomes visible
+            which was previously hidden. The &lt;summary&gt; tag was added in HTML
+            5. The &lt;summary&gt; tag requires both starting and ending tag.
+          </li>
+          <li><b>&lt;time&gt;</b>: The &lt;time&gt; tag is used to display the
+            human-readable data/time. It can also be used to encode dates and
+            times in a machine-readable form. The main advantage for users is that
+            they can offer to add birthday reminders or scheduled events in their
+            calendars and search engines can produce smarter search results.
+          </li>
+          <li><b>&lt;bdi&gt;</b>: The &lt;bdi&gt; tag refers to the Bi-Directional
+            Isolation. It differentiates a text from other text that may be
+            formatted in different direction. This tag is used when a user
+            generated text with an unknown direction.
+          </li>
+          <li><b>&lt;wbr&gt;</b>: The &lt;wbr&gt; tag in HTML stands for word break
+            opportunity and is used to define the position within the text which
+            is treated as a line break by the browser. It is mostly used when the
+            used word is too long and there are chances that the browser may break
+            lines at the wrong place for fitting the text.
+          </li>
+          <li><b>&lt;datalist&gt;</b>: The &lt;datalist&gt; tag is used to provide
+            autocomplete feature in the HTML files. It can be used with input tag,
+            so that users can easily fill the data in the forms using select the
+            data.
+          </li>
+          <li><b>&lt;keygen&gt;</b>: The &lt;keygen&gt; tag in HTML is used to specify a
+            key-pair generator field in a form. The purpose of &lt;keygen&gt;
+            element is to provide a secure way to authenticate users. When a form
+            is submitted then two keys are generated, private key and public key.
+            The private key stored locally, and the public key is sent to the
+            server. The public key is used to generate client certificate to
+            authenticate user in future.
+          </li>
+          <li><b>&lt;output&gt;</b>: The &lt;output&gt; tag in HTML is used to represent
+            the result of a calculation performed by the client-side script such
+            as JavaScript.
+          </li>
+          <li><b>&lt;progress&gt;</b>: It is used to represent the progress of a task. It
+            also defines how much work is done and how much is left to download a
+            task. It is not used to represent the disk space or relevant query.
+          </li>
+          <li><b>&lt;svg&gt;</b>: It is the Scalable Vector Graphics.</li>
+          <li><b>&lt;canvas&gt;</b>: The &lt;canvas&gt; tag in HTML is used to draw
+            graphics on web page using JavaScript. It can be used to draw paths,
+            boxes, texts, gradient and adding images. By default, it does not
+            contain border and text.
+          </li>
+          <li><b>&lt;audio&gt;</b>: It defines the music or audio content.</li>
+          <li><b>&lt;embed&gt;</b>: Defines containers for external applications (usually a
+            video player).
+          </li>
+          <li><b>&lt;source&gt;</b>: It defines the sources for &lt;video&gt; and
+            &lt;audio&gt;.
+          </li>
+          <li><b>&lt;track&gt;</b>: It defines the tracks for &lt;video&gt; and
+            &lt;audio&gt;.
+          </li>
+          <li><b>&lt;video&gt;</b>: It defines the video content.</li> 
+      </ul>
+    </section> </article>
+  </body>
+  <script src="index.js"></script>
+</html>
