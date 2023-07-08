@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register an Employee form</title>
+    <title>Draw Something</title>
+    <script>
+        function drawOnCanvas(){
+            let c = document.getElementById("c");
+            let ctx = c.getContext("2d");
+            ctx.fillStyle = "#00FF00";
+            ctx.fillRect(50,50,200,150);
+            ctx.moveTo(50,50);
+            ctx.lineTo(250,200);
+            ctx.moveTo(250, 50);
+            ctx.lineTo(50, 200);
+            ctx.strokeStyle = "#FF0000";
+            ctx.stroke();
+        }
+    </script>
 </head>
-<body>
-    <h1>Employee Registration Form</h1>
-    <form action="thankyou.html">
-    <label for="fullName">Full Name:</label><br>
-    <input type="text" id="fullName" name="fullName" placeholder="Please Enter Full Name"  autofocus required>*<br>
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" placeholder="Enter valid email" required>*<br>
-    <label for="dateOfBirth">Date of Birth</label><br>
-    <input type="date" id="dateOfBirth" name="dateOfBirth" required>*<br>
-    <label for="age">Age</label>
-    <input type="number" id="age" name="age" size="6" min="18" max="120" step="1" value="21"><br>
-    <label for="rating">Years of Experience :</label><br>
-    <input type="range" id="range" name="id" min="0" max="100" step="1" value="0"><br>
-    <label for="phone">Phone number:</label><br>
-    <input type="text" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="xxx-xxx-xxxx" required>*<br>
-    <input type="submit" value="Register"><br>
-    <p>*field Marks are required</p>
-</form>
+<body onload="drawOnCanvas();">
+    <canvas id="c" width="400" height="300"
+    style="border: 1px solid #c3c3c3;">
+        Your browser does not supprt canvas element
+    </canvas>
 </body>
 </html>
