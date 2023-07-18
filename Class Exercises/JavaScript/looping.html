@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script>
+        //Looping construct
+            for(var i=0;i<10;++i){
+                console.log("running..."+i);
+            }
+            //second loop - multiple
+            for(var i=0,j=10;i<10 && j>0;i++,j--){
+                console.log(i+":"+j);
+            }
+            //nested for loo
+            for(var i=0;i<10;i++){
+                for(var j=0;j<10;j++){
+                   // console.info("*");
+                    document.write("*");
+                }
+                document.writeln("<br>");
+            }
+            for(var i=0;i<10;i++){
+                for(var j=0;j<i;j++){
+                   // console.info("*");
+                    document.write("*");
+                }
+                document.writeln("<br>");
+            }
+            for(var i=0;i<10;i++){
+                for(var j=10;j>i;j--){
+                   // console.info("*");
+                    document.write("*");
+                }
+                document.writeln("<br>");
+            }
+            var myarray=["ten",20,30,40,50];
+            console.log(myarray);
+            myarray[4]=200;
+            console.log(myarray[4]);
+            console.log(myarray);
+            for(var i=0;i<myarray.length;i++){
+                console.log(myarray[i]);
+            }
+        </script>
+    </head>
+</html>

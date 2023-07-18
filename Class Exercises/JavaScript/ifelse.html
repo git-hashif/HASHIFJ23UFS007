@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <script>
+            var age=20;
+            var result=age>18;
+           console.log(result);
+           if(age>18){
+                console.log("you are eligible for voting....");
+           }
+           else{
+                console.log("you are not eligible...");
+           }
+           var day="tuesday";
+           if(day=="monday"){
+                console.log("its a working day...");
+           }
+           else if(day=="sunday"){
+            console.log("its a holiday...");
+           }
+           else if(day=="friday"){
+            console.log("its a holy day....");
+           }
+           else{
+            console.log("its a normal working day....");
+           }
+           //Nested Ifs
+           var holiday=true;
+           day="monday";
+           if(day=="monday"){
+            if(holiday){
+                console.log("Monday-its holiday today....");
+            }
+            else{
+                console.log("Monday-its a working day....");
+            }
+           }
+           if(day=="monday" && holiday){
+                console.log("its a holiday..............................");
+           }
+           else{
+                console.log("working day......................................");
+           }
+        </script>
+    </head>
+</html>
