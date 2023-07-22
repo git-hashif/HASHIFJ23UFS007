@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+            var str="FLASH NEWS-Chandrayan reached surface of moon...big step for ISRO....";
+            var i=0;
+            function start(){
+                var substr=str.substring(0,i);
+                i++;
+                if(i>=str.length){
+                    i=0;
+                }
+               console.log(substr);
+            }
+            window.setTimeout("start();",100);
+            window.setInterval("start();",100);
+        </script>
+    </head>
+    <body>
+        <input type="button" value="click me" onclick="start()"/>
+        <textarea rows="40" cols="100"></textarea>
+    </body>
+</html>
