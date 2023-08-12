@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script>
+
+            //Association
+            function Human(name,deptname){
+                this.name=name;
+                this.deptname=deptname;
+                this.display=Display;
+            }
+            function Display(){
+                console.log(this.name+":"+this.deptname);
+            }
+            var sho=new Human("hit","goldentouch");
+            sho.display();
+        </script>
+    </head>
+</html>

@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script>
+            function Human(name){
+                this.name=name;
+                this.getName=function(){
+                    return this.name;
+                }
+            }
+            var shoiab=new Human("UIUX Teacher");
+            console.log(shoiab.getName());
+            //DEEP COPY OBJECT
+            var shoiabcopy=new shoiab.constructor("golden touch");
+            console.log(shoiabcopy.getName());
+            console.log(shoiab.getName());
+        </script>
+    </head>
+</html>
