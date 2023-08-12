@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script>
+            //Inheritance 
+            function Hall(){
+                this.getName=function(){
+                    return this.name;
+                }
+            }
+            function PartyHall(name){
+                this.name=name;
+            }
+            function MarriageHall(name){
+                this.name=name;
+            }
+            var hall=new Hall();
+            PartyHall.prototype=hall;
+            // Making a copy with prototype
+            PartyHall.prototype.constructor=PartyHall;
+            var partyhall=new PartyHall("100 seater hall");
+            console.log(partyhall.getName());
+            console.log(partyhall.constructor);
+            console.log(partyhall.constructor);
+            var ph=new partyhall.constructor("200 seater expansion..");
+            console.log(ph.getName());
+        </script>
+    </head>
+</html>
