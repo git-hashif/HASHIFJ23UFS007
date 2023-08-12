@@ -32,7 +32,7 @@ function calculatePrimesArray(numberOfPrimes) {
 		
 		// if prime add to array
 		if (isPrime) {
-			
+			primes.push(lastTested);
 		}
 	}
 		
@@ -43,8 +43,8 @@ function testForPrime(numberToTest, primes) {
 	var upperLimit = Math.ceil(Math.sqrt(numberToTest));
 	
 	// loop until prime divisor is greater than upper limit to test
-	for (var i = 0;    ; i++) {
-		if (     ) {
+	for (var i = 0; primes[i]<=upperLimit   ; i++) {
+		if (   numberToTest %primes[i] ==0  ) {
 			return false;
 		}
 	}
@@ -55,9 +55,13 @@ function testForPrime(numberToTest, primes) {
 function displayPrimes(numberOfPrimes, primes) {
 	document.write("You wanted this many primes: " + 
 		numberOfPrimes + "<br/>");
-	
+	var primeString = "";
+	for (var i = 0 ; i < primes.length -1;i++){
+		primeString +=primes[i]+ ",";
+	}
+	primeString += primes[primes.length - 1]
 	// add primes to end of display text
 	document.write("The first " + numberOfPrimes + 
-		" prime numbers are: " );
+		" prime numbers are: " +primeString);
 }
 
