@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <script>
+            function Human(name,age){
+                this.name=name;
+                this.age=age;
+                this.isValid=function(){
+                    if(this.age>18){
+                        return this.name+" is allowed....";
+                    }
+                    else{
+                        return this.name+" is not allowed...";
+                    }
+                }
+            }
+            var ramu=new Human("ramu",20);
+            console.log(ramu.isValid());
+            //open close principle - without accessing the funciton code, still you can extend the function with more properties
+            //using prototype keyword
+            Human.prototype.getName=function(){
+                return this.name;
+            }
+            console.log(ramu.getName());
+            //DEEP COPYING
+            var ramucopy=new ramu.constructor("somu",20);
+            console.log(ramucopy.getName());
+            //ASSOCIATION - ENCAPSULATION
+            function display(){
+                console.log(this.name+":"+this.age);
+            }
+            function Person(name,age){
+                this.name=name;
+                this.age=age;
+                this.display=display;
+            }
+            var p=new Person("ramesh",20);
+            p.display();
+            //INHERITANCE
+            function Hall(){
+                this.display=function(){
+                    console.log(this.name);
+                }
+            }
+            function PartyHall(name){
+                this.name=name;
+            }
+            function MarriageHall(name){
+                this.name=name;
+            }
+            var hall=new Hall();
+            PartyHall.prototype=hall;//this does inheritance
+            PartyHall.prototype.constructor=PartyHall;//this will point the constructor to partyhall
+            MarriageHall.prototype=hall;
+            MarriageHall.prototype.constructor=MarriageHall;
+            var ph=new PartyHall("party hall....");
+            ph.display();
+            var mh=new MarriageHall("marriage hall....");
+            mh.display();
+            console.log(ph.constructor+":"+mh.constructor);
+            var phcopy=new ph.constructor("copy of party hall");
+            phcopy.display();
+        </script>
+    </head>
+</html>
