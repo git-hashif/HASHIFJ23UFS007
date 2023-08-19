@@ -1,0 +1,57 @@
+<html>
+<head>
+    <script>
+        //removed the if-else-if ladder
+        //my fan is open for extension and closed for modification
+        //converted the condition to functions
+        //grouped them under a hierarchy called State
+        //created an association between fan and state
+        //the above is called STRATEGY
+        function fan(){
+            this.state=new SwitchOffState();
+            this.pull=function(){
+                this.state.pull(this);
+                this.state.changeState();
+            }
+        }
+        function State(){
+            this.pull=function(fan){
+                this.fan=fan;
+            }
+        }
+        function SwitchOffState(){
+            this.changeState=function(){
+                console.log("switch on state....");
+                this.fan.state=new SwitchOnState();
+            }
+        }
+        function SwitchOnState(){
+            this.changeState=function(){
+                console.log("Medium speed state....");
+                this.fan.state=new MediumSpeedState();
+            }
+        }
+        function MediumSpeedState(){
+            this.changeState=function(){
+                console.log("High speed state....");
+                this.fan.state=new HighSpeedState();
+            }
+        }
+        function HighSpeedState(){
+            this.changeState=function(){
+                console.log("Switch off state....");
+                this.fan.state=new SwitchOffState();
+            }
+        }
+        var state=new State();
+        SwitchOffState.prototype=state;
+        SwitchOnState.prototype=state;
+        MediumSpeedState.prototype=state;
+        HighSpeedState.prototype=state;
+        var goodfankhaitan=new fan();
+        for(var i=0;i<10;i++){
+            goodfankhaitan.pull();
+        }
+    </script>
+</head>
+</html>
