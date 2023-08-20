@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+        Here the validation added
+        <input type="text" required>
+        <input type="submit">
+    </form><br>
+    <form novalidate>
+        This form is not get validated
+        <input type="text" required>
+        <input type="submit">
+    </form><br>
+    <form>
+        Autofocus
+        <input type="text" autofocus >
+        placeholder
+        <input type="text" placeholder="Enter Name" > <br>
+        Autocomplete On
+        <input type="text" placeholder="Enter Name" autocomplete="on"> <br>
+        Autocomplete Off
+        <input type="text" placeholder="Enter Name" autocomplete="off"> <br>
+
+        checkbox
+            <input type="checkbox" required > <br>
+        
+        Select Item
+        <select required>
+            <option value="">--Choose City--</option>
+            <option>New Delhi</option>
+            <option>Chennai</option>
+            <option>Calicut</option>
+            <option>Kolkata</option>
+        </select> <br>
+        pattern 
+        <input type="text" placeholder="Enter Pincode" required pattern="^[0-9]{6}$" title="Enter Valid Pin Code">
+
+        minlength
+        <input type="text" placeholder="Enter Name" required minlength="3" >
+
+        Readonly
+        <input type="text" value="India" readonly >
+
+        list
+        <input type="text" placeholder="Enter City Name" list="citylist" required>
+        <datalist id="citylist">
+        <option>New Delhi</option>
+        <option>Chennai</option>
+        <option>Kolkata</option>
+        <option>Mumbai</option>
+        </datalist>
+
+     </form>
+
+</body>
+</html>
