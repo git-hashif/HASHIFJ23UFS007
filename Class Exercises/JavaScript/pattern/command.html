@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <script>
+            function Tv(){
+                this.av1=function(){
+                    console.log("av1 mode....");
+                }
+                this.av2=function(){
+                    console.log("av2 mode.....");
+                }
+            }
+            function FireStick(){
+                this.newsChannel=function(){
+                    console.log("news channel selected...");
+                }
+                this.serialChannel=function(){
+                    console.log("serial channel selected...");
+                }
+            }
+            function Ac(){
+                this.acOn=function(){
+                    console.log("ac switched on....");
+                }
+            }
+            function soundBox(){
+                this.increaseVolume=function(){
+                    console.log("volume increased...");
+                }
+            }
+            function DummyCommand(){
+                this.execute=function(){
+                    console.log("I am dummy yet to be operational...");
+                }
+            }
+            function FatherTVCommand(){
+                this.execute=function(){
+                    var tv=new Tv();
+                    var fs=new FireStick();
+                    var aircon=new Ac();
+                    var sb=new soundBox();
+                    console.log("Father news channel command initiated...");
+                    tv.av1();fs.newsChannel();aircon.acOn();sb.increaseVolume();
+                    console.log("Father news tv on...enjoy the news my master...");
+                }
+            }
+            function UniversalRemote(){
+                var command=null;
+                this.init=function(){
+                    this.command=new FatherTVCommand();
+                }
+                this.executeCommand=function(){
+                    this.command.execute();
+                }
+            }
+            var ur=new UniversalRemote();
+            ur.init();
+            ur.executeCommand();
+        </script>
+    </head>
+</html>
