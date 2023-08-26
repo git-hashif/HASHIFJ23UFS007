@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script>
+            class MyException extends Error{
+                constructor(msg){
+                    super(msg);
+                }
+            }
+           console.log("before");
+           try{
+            //setTimeout();
+            call();
+            var i=0;
+            if(i==0){
+                throw new MyException("value cannot be zero..by customssss..");
+            }
+           }catch(e){
+            console.log("Exception...:"+e);
+           }
+           finally{
+            console.log("finally called...");
+           }
+           console.log("after...")
+           function call(){
+           }
+        </script>
+    </head>
+</html>
