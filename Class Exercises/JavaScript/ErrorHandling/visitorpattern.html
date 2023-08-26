@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <script>
+            class Child{
+                play(dog,item){
+                    try{
+                        dog.play(item);
+                    }catch(e){
+                        console.log(e);
+                    }
+                }
+            }
+            class Dog{
+                play(item){
+                    item.execute();
+                }
+            }
+            class Item{
+                execute(){
+                }
+            }
+            class StoneItem extends Item{
+                execute(){
+                    throw new DogBarkException("you throw I bark....");
+                }
+            }
+            class StickItem extends Item{
+                execute(){
+                    throw new DogBiteException("you beat I bite....");
+                }
+            }
+            class DogExceptions extends Error{
+                constructor(msg){
+                    super(msg);
+                }
+            }
+            class DogBiteException extends DogExceptions{
+                constructor(msg){
+                    super(msg);
+                }
+            }
+            class DogBarkException extends DogExceptions{
+                constructor(msg){
+                    super(msg);
+                }
+            }
+            var tiger=new Dog();
+            var baby=new Child();
+            var myitem=new StickItem();
+            baby.play(tiger,myitem);
+        </script>
+    </head>
+</html>
