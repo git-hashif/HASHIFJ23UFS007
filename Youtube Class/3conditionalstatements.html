@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         //conditional operators
+         n3 = 10
+        n4 = 30
+        if(n3%2 ==0){
+            console.log("even number")
+        } else {
+            console.log("Odd number")
+        }
+
+       // n1 = parseInt(prompt("Enter number"))
+        if(n1%2 == 0){
+            console.log("even number")
+        } else {
+            console.log("Odd Number")
+        }
+
+        // Ternary operator
+        n1=60;
+        (n1==60)?console.log("yes"):console.log("No");
+
+        //nested ternary
+        day = parseInt(prompt("Enter the day"));
+        holiday =  parseInt(prompt("Is this holiday ?"));
+        (day==1)?(holiday==1)?console.log("Holday Wasted"):console.log("Normal Holiday"):console.log("Working Day")
+
+        //switch case
+        day = 5;
+        switch(day){
+            case 1:{
+                console.log("Its Sunday");
+                break;
+            }
+            case 2:{
+                console.log("Its Monday");
+                break;
+            }
+            default:{
+                console.log("Its normal day") 
+            }
+        }
+
+        //Switch case 2
+        
+        numberType = 1
+        switch(numberType%2){
+            case 0:{
+                console.log("Its even number");
+                break;
+            }
+            default:{
+                console.log("Its Odd number")
+            }
+        }
+    </script>
+</body>
+</html>
