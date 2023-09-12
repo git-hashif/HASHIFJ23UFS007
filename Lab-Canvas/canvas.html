@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#FirstCanvas{
+width: 500px;
+height: 300px;
+border: 3px solid green;
+background-color: orange;
+}
+</style>
+<body>
+    <canvas id="FirstCanvas" height="300" width="400">
+</canvas>
+<script>
+var canvas = document.getElementById('FirstCanvas');
+if (canvas.getContext)
+{
+var ctx = canvas.getContext('2d');
+// drawing code here
+}
+else
+{
+// canvas-unsupported code here
+}
+</script>
+</body>
+</html>

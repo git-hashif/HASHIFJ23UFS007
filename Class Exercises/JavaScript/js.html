@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+            var str=prompt("Please enter a string..");
+            var i=0;
+            function met(){
+                var substr=str.substring(0,i);
+                i=i+1;
+                if(i==str.length){
+                    i=0;
+                }
+                console.log(substr);
+            }
+            window.setInterval("met();",200);
+        </script>
+    </head>
+    <body>
+        <input type="text">
+        <input type="button"
+            value="click me" onclick="met()">
+    </body>
+</html>
