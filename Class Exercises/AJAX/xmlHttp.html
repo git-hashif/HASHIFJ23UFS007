@@ -6,8 +6,7 @@
             function getData(){
                  url=document.getElementById("t1");
                 console.log(url.value);
-                xhr.open("GET",url.value);//step1
-                //anonymous inner function
+                xhr.open("GET",url.value);
         xhr.onreadystatechange=function(){
             if(xhr.readyState==4 && xhr.status==200){
                 var response=xhr.responseText;
