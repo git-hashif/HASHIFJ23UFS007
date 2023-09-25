@@ -1,0 +1,34 @@
+<script>
+	var fanstate=0;
+	function Fan()
+	{		
+		this.pull=function()
+		{
+			if(fanstate==0)	
+			{
+				fanstate=1;
+				console.log('switch on state....');
+			}
+			else if(fanstate==1)
+			{
+				fanstate=2;
+				console.log('medium speed state...');
+			}
+			else if(fanstate==2)
+			{
+				fanstate=3;
+				console.log('high speed state....');
+			}
+			else if(fanstate==3)
+			{
+				fanstate=0;
+				console.log('switch off state....');
+			}
+		}	
+	}
+	var khaitan=new Fan(); 
+	for(var i=0;i<10;i++)
+	{
+		khaitan.pull();	
+	}
+</script>
